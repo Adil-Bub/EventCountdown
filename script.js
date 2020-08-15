@@ -15,6 +15,7 @@ function getCountdown() {
   let current_date = new Date().getTime();
   let seconds_left = (target_date - current_date) / 1000;
   seconds_left += 50400;
+  if (seconds_left <= 0) seconds_left = 0;
 
   days = pad(parseInt(seconds_left / 86400));
   seconds_left = seconds_left % 86400;
